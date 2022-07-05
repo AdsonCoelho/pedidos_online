@@ -4,6 +4,8 @@
 	padding: 0;
 }
 
+/*Menu da página index.html*/
+
 .menu{
 	width: 900px;
 	margin: auto;
@@ -32,7 +34,7 @@
 	text-align: justify;
 }
 
-/*Imagem do conteúdo da página inicial*/
+/*Imagem do conteúdo da página index.html*/
 .img_conteudo{
   position: relative;
   left:30em;
@@ -54,7 +56,6 @@
   height:180px;
   font-size: 30px;
   text-align: center;
-
 }
 
 .label_login
@@ -63,19 +64,7 @@
     font-family: "Segoe UI","Arial","Times New Roman";
   }
 
-/*Imagem do rodapé*/
-
-.img_rodape
-{
-  position:relative;
-  left:27em;
-  width:100px; 
-}
-
-
-/*******************************************/
-
-  /*Menu: Início/Produtos/Sobre/Carrinho*/
+ /*Menu: Início/Produtos/Sobre/Carrinho*/
 
 .menu a{
 	color: rgb(255, 255, 255);
@@ -87,42 +76,16 @@
   top:2em;
 }
 
-/**Posição do formulário na página***/
-#area
+/*Imagem global do rodapé*/
+
+.img_rodape
 {
   position:relative;
-  left:30%;
-  top:5em;
-  width:350px;
-  height:350px;
-  background-color:rgb(128, 68, 0);
+  left:27em;
+  width:100px; 
 }
 
-/*Área acima do formulário*/
-#area #formulario
-{
-  position:absolute;
-  display: block;
-  background-color:#ffffff;
-}
-
-/**Área do field set, 
-***todo o fundo do fale conosco,
-***Nome e Email.*/
-fieldset
-{
-  width:445px;
-  height:350px;
-  background-color:#ffffff;
-}
-
-/***Título fale conosco***/
-legend
-{
-  font-weight: bolder ;
-  font-family: "Segoe UI","Arial","Times New Roman";
-  background-color:#ffffff;
-}
+/*******************************************/
 
 /***label nome e Email***/
 #formulario label
@@ -133,7 +96,7 @@ legend
   background-color:#ffffff; 
 }
 
-/***Campos Nome e Email***/
+/***Página cadastar usuários***/
 #formulario input.campo_nome
 {
   background-color:#ffffff;
@@ -151,13 +114,6 @@ legend
   width:250px;
 }
 
-/***Campo do texto da mensagem****/
-#formulario textarea.msg
-{
-  position:absolute;
-  background-color:#ffffff;
-}
-
 /***Botão***/
 #formulario input.btn_submit
 {
@@ -171,12 +127,12 @@ legend
 /*************************/
 
 
-/** estilo para Div1 para a página sobre**/
+/** estilo para Div1 para a página admin**/
 
 .menu_cbclho{
 	width: 900px;
 	margin: auto;
-	text-align: center;
+	text-align: left;
   }
 
 .menu_cbclho a
@@ -188,20 +144,9 @@ legend
   position:relative;
 }
 
-.bory_sobre_cab{
+.bory_admin_cab{
   background-color: rgb(253, 103, 208);
   margin: 50px;
-}
-
-.ctd_princ_sobre_esct_titulo{
-position:relative;
-font-size: 36px;
-color: rgb(0, 0, 0); 
-width:80%;
-height:60%;
-top:2em;
-margin: 10px auto;
-text-align: justify;
 }
 
 .img_sobre{
@@ -209,7 +154,7 @@ text-align: justify;
   left:20em;
   width:350px;
   height:350px;
-  top:3em;
+  top:10em;
 
 }
 
@@ -218,10 +163,10 @@ text-align: justify;
 /** estilo para Div1 para a página vendedor**/
 
 /**Posição do formulário na página***/
-#formulario_vendedor
+#formulario_cadastrar
 {
   position:relative;
-  left:30%;
+  left:50%;
   top:5em;
   width:350px;
   height:350px;
