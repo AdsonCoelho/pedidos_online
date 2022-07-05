@@ -1,0 +1,229 @@
+/*Iniciando margens e espaço do novegador com 0*/
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.menu{
+	width: 900px;
+	margin: auto;
+	text-align: center;
+  }
+
+.ctd_princ_esct_titulo{
+  position:relative;
+  font-size: 36px;
+  color: rgb(0, 0, 0); 
+  width:90%;
+  height:70%;
+  top:4em;
+  margin: 10px auto;
+	text-align: center;
+ }
+
+.ctd_princ_esct_subtitulo{
+  position:relative;
+  font-size: 35px;
+  color: rgb(0, 0, 0);
+  width:90%;
+  height:70%;
+  top:5em;
+  margin: 10px auto;
+	text-align: justify;
+}
+
+/*Imagem do conteúdo da página inicial*/
+.img_conteudo{
+  position: relative;
+  left:30em;
+  width:500px;
+  height:800px;
+}
+
+.ctd_principal{
+  background-color: rgb(253, 103, 208);
+  margin: 15px;
+}
+
+.campos_login{
+  position:relative;
+  left: 8em;
+  top:12em;
+  border:3px solid rgb(58, 52, 43) ;
+  width:280px;
+  height:180px;
+  font-size: 30px;
+  text-align: center;
+
+}
+
+.label_login
+  {
+    font-weight: bolder ;
+    font-family: "Segoe UI","Arial","Times New Roman";
+  }
+
+/*Imagem do rodapé*/
+
+.img_rodape
+{
+  position:relative;
+  left:27em;
+  width:100px; 
+}
+
+
+/*******************************************/
+
+  /*Menu: Início/Produtos/Sobre/Carrinho*/
+
+.menu a{
+	color: rgb(255, 255, 255);
+	padding-right: 14px;
+ 	font-size: 36px;
+	margin:0 10px;
+	font-family: cursive;
+  position:relative;
+  top:2em;
+}
+
+/**Posição do formulário na página***/
+#area
+{
+  position:relative;
+  left:30%;
+  top:5em;
+  width:350px;
+  height:350px;
+  background-color:rgb(128, 68, 0);
+}
+
+/*Área acima do formulário*/
+#area #formulario
+{
+  position:absolute;
+  display: block;
+  background-color:#ffffff;
+}
+
+/**Área do field set, 
+***todo o fundo do fale conosco,
+***Nome e Email.*/
+fieldset
+{
+  width:445px;
+  height:350px;
+  background-color:#ffffff;
+}
+
+/***Título fale conosco***/
+legend
+{
+  font-weight: bolder ;
+  font-family: "Segoe UI","Arial","Times New Roman";
+  background-color:#ffffff;
+}
+
+/***label nome e Email***/
+#formulario label
+{
+  position: absolute;
+  left:8px;
+  margin-right:6px;
+  background-color:#ffffff; 
+}
+
+/***Campos Nome e Email***/
+#formulario input.campo_nome
+{
+  background-color:#ffffff;
+  position:absolute;
+  left:100px;
+  top:30px;
+  width:250px;
+}
+#formulario input.campo_email
+{
+  background-color:#ffffff;
+  position:absolute;
+  left:100px;
+  margin-top:3px;
+  width:250px;
+}
+
+/***Campo do texto da mensagem****/
+#formulario textarea.msg
+{
+  position:absolute;
+  background-color:#ffffff;
+}
+
+/***Botão***/
+#formulario input.btn_submit
+{
+  border-style:dashed;
+  position:absolute;
+  bottom: 0.3em;
+  right:40px;
+  background-color:#444141;
+}
+
+/*************************/
+
+
+/** estilo para Div1 para a página sobre**/
+
+.menu_cbclho{
+	width: 900px;
+	margin: auto;
+	text-align: center;
+  }
+
+.menu_cbclho a
+{
+  color: rgb(255, 255, 255);
+	
+ 	font-size: 36px;
+	font-family: cursive;
+  position:relative;
+}
+
+.bory_sobre_cab{
+  background-color: rgb(253, 103, 208);
+  margin: 50px;
+}
+
+.ctd_princ_sobre_esct_titulo{
+position:relative;
+font-size: 36px;
+color: rgb(0, 0, 0); 
+width:80%;
+height:60%;
+top:2em;
+margin: 10px auto;
+text-align: justify;
+}
+
+.img_sobre{
+  position: relative;
+  left:20em;
+  width:350px;
+  height:350px;
+  top:3em;
+
+}
+
+/*************************/
+
+/** estilo para Div1 para a página vendedor**/
+
+/**Posição do formulário na página***/
+#formulario_vendedor
+{
+  position:relative;
+  left:30%;
+  top:5em;
+  width:350px;
+  height:350px;
+  background-color:rgb(128, 68, 0);
+}

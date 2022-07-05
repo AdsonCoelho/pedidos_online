@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> A e J modas atacado</title>
+		<meta charset="utf-8">
+		<link a href="style.css" type="text/css" rel="stylesheet" />
+ 		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+		
+	<SCRIPT LANGUAGE="JavaScript">
+		function Login(){
+		var done=0;
+		var username=document.login.username.value;
+		username=username.toLowerCase();
+		var password=document.login.password.value;
+		password=password.toLowerCase();
+		if (username=="admin" && password=="12345") { window.location="admin.html"; done=1; }
+		if (username=="user" && password=="user") { window.location="produtos.html"; done=1; }
+		if (done==0) { alert("Senha ou Usuário inválido."); }
+		}
+		
+		</SCRIPT>
+	
+		<body class="body">
+		<header class="cabecalho">
+			<!-- <img class="img_cabecalho" src="logo.png" alt="A e J Modas"/>-->
+			<nav class="cabecalho_menu">
+				<div class="menu">
+					<a class="" href="index.html">Página inicial</a>
+					<a class="" href="produtos.html">Produtos</a>
+					<a class="" href="sobre.html">Sobre</a>
+					<a class="" href="carrinho.html">Carrinho</a>			
+				</div>
+			</nav>
+		</header>
+
+		<main class="conteudo">
+			<section class="ctd_principal">
+				<div class="ctd_princ_escrito">
+					<h1 class="ctd_princ_esct_titulo">Sejam todos bem vindos ao website do A e J Modas Atacado😊</h1>
+					<h3 class="ctd_princ_esct_subtitulo">Aqui você encontra o nosso catálogo de produtos, pode fazer pedidos,
+						conferir nossas dicas de modas e muito mais...
+						você pode conferir entrando em um dos nossos grupos de whatsapp,
+						facebook ou instagram!!!
+					</h3>
+										
+					<form class="login" method="post" name="login">
+						<div class="campos_login">
+							<h1><i class="label_login"></i> Login</h1>
+							<label>
+								<input  class="campos" type="text" placeholder="Nome de usuário" name="username">
+							</label><br>
+							<label>
+								<input type="password" class="campos" placeholder="Senha"  name="password">
+							</label> <br>
+								<input type="button" class="btn fade_8S" name="login" value="Entrar" onClick="Login()">
+						</div>
+					
+						<img class="img_conteudo" src="conteudo.jpeg"></a>
+					</form>
+				</div> 	
+			
+			</section>
+		
+		
+		</main>
+		<footer class="rodape">
+			<img class="img_rodape" src="rodape.png"></a>
+		</footer>
+		
+	</body>
+	
+
+</html>

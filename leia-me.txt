@@ -1,0 +1,14 @@
+Versão beta 0.1
+
+Autor: Adson de Oliveira Coelho
+
+Esse software é um projeto de cadastro de pedidos online. 
+Esse projeto também é parte integrante do projeto aejweb, 
+sendo desenvolvido separadamente, porém será incluído na versão final.
+
+As principais funções dele são:
+1 - Cadastrar usuários
+2 - Cadastrar produtos
+3 - exibir produtos cadastrados
+4 - deletar produtos cadastrados
+5 - Atualizar produtos cadastrados.
