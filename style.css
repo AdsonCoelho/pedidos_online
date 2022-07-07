@@ -128,27 +128,33 @@
 .conteudo_2 {
   position:relative;
   width:100%;
-  left: 25%;
+  left: 40%;
   top:10px;
-  
   margin: 20px;
+}
 
-
+.conteudo_3 {
+  position:relative;
+  width:100%;
+  left: 45%;
+  top:1px;
+  margin: 2px;
 }
 
 .img_feminino {
   position:relative;
   width:20%;  
+  height: 100%;   
 }
 
 .img_masculino {
   position:relative;
-  width:21.27%;
+  width:20%;
   height: 100%;   
 }
 
 .img_infantil {
   position:relative;
-  width:20%;   
-  height: 50%;   
+  width:22%;   
+  height: 100%;   
 }
