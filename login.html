@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> A e J modas atacado</title>
+		<meta charset="utf-8">
+		<link a href="style.css" type="text/css" rel="stylesheet" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>
+		
+	<SCRIPT LANGUAGE="JavaScript">
+		function Login(){
+		var done=0;
+	
+		var username=document.login.username.value;
+		username=username.toLowerCase();
+		
+		var password=document.login.password.value;
+		password=password.toLowerCase();
+			if (username=="admin" && password=="12345") 
+				{ 
+					window.location="admin.html"; done=1; 
+				}
+			if (username=="user" && password=="user") 
+				{ 
+					window.location="produtos.html"; done=1; 
+				}
+			if (done==0) 
+				{
+					alert("Você digitou nome de uário errado ou senha inválida.");
+			 	}
+		}
+		
+		</SCRIPT>
+	
+		<body class="body">
+		<header class="cabecalho">
+			<nav class="cabecalho_menu">
+				<div class="menu">
+					<a class="" href="index.html">Página inicial</a>
+					<a class="" href="produtos.html">Produtos</a>
+					<a class="" href="sobre.html">Sobre</a>
+					<a class="" href="login.html">Login</a>			
+				</div>
+			</nav>
+		</header>
+
+		<main class="login">
+			<form class="login" method="post" name="login">
+				<div class="campos_login">
+					<h1><i class="label_login"></i> Login</h1>
+					<label>
+						<input  class="campos" type="text" placeholder="Nome de usuário" name="username">
+					</label><br>
+					<label>
+		    			<input type="password" class="campos" placeholder="Senha"  name="password">
+					</label> <br>
+						<input type="button" class="btn fade_8S" name="login" value="Entrar" onClick="Login()">
+				</div>
+			</form>
+		</main>
+		
+        <footer class="rodape">
+			<img class="img_rodape" src="rodape.png"></a>
+		</footer>
+		
+	</body>
+	
+
+</html>
