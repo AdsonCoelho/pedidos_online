@@ -89,41 +89,52 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <title>Login</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        body{ font: 14px sans-serif; }
-        .wrapper{ width: 360px; padding: 20px; }
-    </style>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bem vindo</title>
+    <link a href="style.css" type="text/css" rel="stylesheet" />
 </head>
-<body>
-    <div class="wrapper">
-        <h2>Login</h2>
-        <p>Por favor, preencha os campos para fazer o login.</p>
 
-        <?php 
-        if(!empty($login_err)){
-            echo '<div class="alert alert-danger">' . $login_err . '</div>';
-        }        
-        ?>
+<body class="body">
+    <main class="conteudo">
+        <header class="cabecalho">
+			<nav class="cabecalho_menu">
+				<div class="menu">
+					<a class="" href="index.html">Página inicial</a>
+					<a class="" href="produtos.html">Produtos</a>
+					<a class="" href="sobre.html">Sobre</a>
+					<a class="" href="login.php">Login</a>			
+				</div>
+			</nav>
+		</header>
 
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-            <div class="form-group">
-                <label>Nome do usuário</label>
-                <input type="text" name="username" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
-                <span class="invalid-feedback"><?php echo $username_err; ?></span>
-            </div>    
-            <div class="form-group">
-                <label>Senha</label>
-                <input type="password" name="password" class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>">
-                <span class="invalid-feedback"><?php echo $password_err; ?></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" class="btn btn-primary" value="Entrar">
-            </div>
-            <p>Não tem uma conta? <a href="register.php">Inscreva-se agora</a>.</p>
-        </form>
-    </div>
+	    <section class="conteudo">
+             <div class="formulario_cadastrar">
+            <h1 class="label"> Login</h1>
+           
+            
+            <?php 
+            if(!empty($login_err)){
+                echo '<div class="alert alert-danger">' . $login_err . '</div>';
+            }        
+            ?>
+
+            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+                <div class="input.campo_nome">
+                    <label>Nome do usuário</label>
+                    <input type="text" name="username" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
+                    <span class="invalid-feedback"><?php echo $username_err; ?></span>
+                </div>    
+                <div class="input.campo_senha">
+                    <label>Senha</label>
+                    <input type="password" name="password" class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>">
+                    <span class="invalid-feedback"><?php echo $password_err; ?></span>
+                </div>
+                <div class="input.btn_submit">
+                    <input type="submit" class="btn btn-primary" value="Entrar">
+                </div>
+                <p>Não tem uma conta? <a href="register.php">Inscreva-se agora</a>.</p>
+            </form>
+         </div>
+        </section>
 </body>
 </html>
