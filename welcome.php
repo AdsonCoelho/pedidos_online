@@ -33,10 +33,10 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 		</header>
         <h2> Olá, <b><?php echo htmlspecialchars($_SESSION["username"]); ?>!
         Seja bem vindo ao site do A e J Modas Atacado.</h2>            
-    	</section>
-        </main>.
-     <footer class="rodape">
-		<img class="img_rodape" src="rodape.png"></a>
+    </main>.
+
+	 <footer class="rodape">
+		<img class="img_rodape" src="imagens/rodape.png"></a>
 	</footer>
 </body>
 

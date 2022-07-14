@@ -7,11 +7,27 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<script language="javascript">
 			
+			function preload(){
+				imgs=Array('f1.jpeg','f2.jpeg','f3.jpeg','f4.jpeg','f5.jpeg');
+				imgQtde=imgs.length;
+				for (i=0;i<imgs;i++){
+					var preloadimg=new Image();
+					preloadimg.src=imgs[1];
+				}
+			}
+
 			function iniciaSlider(){
-				max=6;
+				preload();
+				max=5;
 				min=1;
 				fi=min;
+				tr=true;
 				carregaFoto("imagens/f1.jpeg");
+				document.getElementById("moldura").addEventListener("transitionend",fimTr);
+			}
+
+			function fimTr(){
+				tr=true;	
 			}
 
 			function carregaFoto(foto){
@@ -19,12 +35,24 @@
 			}
 
 			function prox(){
-				fi++;
+				if (tr){
+					tr=false;
+					fi++;
+						if (fi>max){
+						fi=min;
+					}
+				}
 				carregaFoto("imagens/f"+fi+".jpeg");
 			}
 
 			function ant(){
-				fi--;
+				if (tr){
+					tr=false;
+					fi--;
+						if (fi<min){
+						fi=max;
+					}
+				}
 				carregaFoto("imagens/f"+fi+".jpeg");
 			}
 
@@ -56,12 +84,7 @@
 			</nav>
 		</header>
 		
-		
-		
 		<section class="conteudo">
-
-			
-		
 			
 			<h1>Sejam todos bem vindos ao website do A e J Modas Atacado😊</h1><br>
 			<h2>Somos um grupo de vendas de produtos no atacado e varejo direto da fábrica.
@@ -69,15 +92,17 @@
 				a linha produtos modas femininas, masculinas e infantil, além de acessórios, 
 				calçados e muitos mais...</h2>
 			</h1>
-
+			<div class="mold" id="moldura"></div>
+			<div class="moldbt">
+				<input type="button" value="Anterior"onclick="ant()"/>
+				<input type="button" value="Próximo" onclick="prox()"/>
+			</div>
 		</section>
-		<div id="moldura"></div>
-		<input type="button" value="Anterior"onclick="ant()"/>
-		<input type="button" value="Próximo" onclick="prox()"/>
-	</main>
+			
+		</main>
 
 	<footer class="rodape">
-		<img class="img_rodape" src="rodape.png"></a>
+		<img class="img_rodape" src="imagens/rodape.png"></a>
 	</footer>
 	
 </body>

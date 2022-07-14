@@ -155,7 +155,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 	 </main>.
      <footer class="rodape">
-		<img class="img_rodape" src="rodape.png"></a>
+		<img class="img_rodape" src="imagens/rodape.png"></a>
 	</footer>
 </body>
 

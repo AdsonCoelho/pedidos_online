@@ -106,6 +106,19 @@
   height: 100%;   
 }
 
+.mold{
+  position: relative;
+  left: 25%;
+  text-align: center;
+
+}
+.moldbt{
+  position: relative;
+  text-align: center;
+
+}
+
+
 /*Imagem global do rodapé*/
 .img_rodape{
   position:relative;
@@ -116,4 +129,20 @@
 #img_logo{
   width: 10%;
   height: 10%;  
+}
+
+.sobre{
+  position: relative;
+  text-align: center; 
+}
+.sobresite{
+  position: relative;
+  text-align: center; 
+  font-size: 16;
+  color: blue;
+}
+.img_sobre{
+  position:relative;
+  width:50px; 
+  left: 50%;
 }

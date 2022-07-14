@@ -130,6 +130,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             </div>
             <p>Já tem uma conta? <a href="login.php">Entre aqui</a>.</p>
         </form>
-    </div>    
+    </div>  
+    <footer class="rodape">
+		<img class="img_rodape" src="imagens/rodape.png"></a>
+	</footer>  
 </body>
 </html>
