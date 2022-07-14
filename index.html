@@ -5,56 +5,77 @@
 	<meta charset="utf-8">
 	<link a href="style.css" type="text/css" rel="stylesheet" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script language="javascript">
+			
+			function iniciaSlider(){
+				max=6;
+				min=1;
+				fi=min;
+				carregaFoto("imagens/f1.jpeg");
+			}
+
+			function carregaFoto(foto){
+				document.getElementById("moldura").style.backgroundImage="URL("+foto+")";
+			}
+
+			function prox(){
+				fi++;
+				carregaFoto("imagens/f"+fi+".jpeg");
+			}
+
+			function ant(){
+				fi--;
+				carregaFoto("imagens/f"+fi+".jpeg");
+			}
+
+	</script>
+		
+	<style>
+
+		#moldura{
+			width: 500px;
+			height: 500px;
+			background-color:rgb(230, 230, 230);
+			transition: background-image 2s;	
+		}
+
+	</style>
 </head>
 
-<body class="body">
+<body onload="iniciaSlider()">
+	
 	<main class="conteudo">
-		<header class="cabecalho">
-			<nav class="cabecalho_menu">
+		<header class="">
+			<nav class="">
 				<div class="menu">
-					<a class="" href="index.html">Página inicial</a>
-					<a class="" href="produtos.html">Produtos</a>
+					<a class="" href="index.html">Inicio</a>
+                    <a class="" href="sobre.html">Catálogo</a>
 					<a class="" href="sobre.html">Sobre</a>
 					<a class="" href="login.php">Login</a>			
 				</div>
 			</nav>
 		</header>
-
+		
+		
+		
 		<section class="conteudo">
+
+			
+		
+			
 			<h1>Sejam todos bem vindos ao website do A e J Modas Atacado😊</h1><br>
 			<h2>Somos um grupo de vendas de produtos no atacado e varejo direto da fábrica.
 				Em nosso site, você vai encontrar o nosso catálogo de produtos, vai poder conhecer
 				a linha produtos modas femininas, masculinas e infantil, além de acessórios, 
 				calçados e muitos mais...</h2>
-			</h1>				
-	
-			<div class="img1_conteudo">
-				<img src="imagens/feminino.jpeg" width="442%" height="290" class="img_feminino"> </a>
-			</div>
-			
-			<div class="img2_conteudo">
-				<h3>Moda Feminina</h3>
-			</div>
-							
-			<div class="img1_conteudo">
-				<img src="imagens/Masculino.jpeg" width="30%" height="38" class="img_masculino"></a>
-			</div>
-		
-			<div class="img2_conteudo">
-				<h3>Moda Masculina</h3>
-			</div>
-		
-			<div class="img1_conteudo">
-				<img src="imagens/Infantil.jpeg" width="585%" class="img_infantil"></a>
-			</div>
-
-			<div class="img2_conteudo">
-				<h3>Moda Infantil</h3>
-			</div>
+			</h1>
 
 		</section>
+		<div id="moldura"></div>
+		<input type="button" value="Anterior"onclick="ant()"/>
+		<input type="button" value="Próximo" onclick="prox()"/>
 	</main>
-	
+
 	<footer class="rodape">
 		<img class="img_rodape" src="rodape.png"></a>
 	</footer>

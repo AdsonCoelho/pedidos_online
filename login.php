@@ -96,45 +96,67 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
 <body class="body">
     <main class="conteudo">
-        <header class="cabecalho">
-			<nav class="cabecalho_menu">
+        <header class="">
+			<nav class="">
 				<div class="menu">
-					<a class="" href="index.html">Página inicial</a>
-					<a class="" href="produtos.html">Produtos</a>
+                <a class="" href="index.html">Inicio</a>
+                    <a class="" href="sobre.html">Catálogo</a>
 					<a class="" href="sobre.html">Sobre</a>
 					<a class="" href="login.php">Login</a>			
 				</div>
-			</nav>
-		</header>
+            </nav>
+        </header>	
+    
+        <section class="">
+		    <div class="form">
+		        <h1 class="label">Login</h1>
+			    <span style="font-weight: normal">
+			        <?php 
+                        if(!empty($login_err)){
+                            echo '<div class="alert alert-danger">' . $login_err . '</div>';
+                        }        
+                    ?>
+		        </span>
+			    
+                    <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+                        <div class="">
+                            <span style="font-weight: normal">
+                                <label>Nome do usuário</label><br>
+                                <input type="text" name="username" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
+                                    <span class="invalid-feedback">
+                                        <?php echo $username_err; ?>
+                                    </span>
+                            </span> 
+                        </div>
+                            
+                        <div class="">
+                            <span style="font-weight: normal">
+                                <label>Digite sua senha</label><br>
+                                <input type="password" name="password" class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?> ">
+                                <span class="invalid-feedback">
+                                    <?php echo $password_err; ?>
+                                </span>
+                            </span> 
+                        </div>
+                    
+                        <div class="btn_entrar">
+                            <span style="font-weight: normal">
+                                <input type="submit" class="" value="Entrar">
+                                <a href="register.php"> ou se inscreva aqui</a>.
 
-	    <section class="conteudo">
-             <div class="formulario_cadastrar">
-            <h1 class="label"> Login</h1>
-           
-            
-            <?php 
-            if(!empty($login_err)){
-                echo '<div class="alert alert-danger">' . $login_err . '</div>';
-            }        
-            ?>
+                            </span>
+                        </div>
+                        
+                </form>
 
-            <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-                <div class="input.campo_nome">
-                    <label>Nome do usuário</label>
-                    <input type="text" name="username" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
-                    <span class="invalid-feedback"><?php echo $username_err; ?></span>
-                </div>    
-                <div class="input.campo_senha">
-                    <label>Senha</label>
-                    <input type="password" name="password" class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>">
-                    <span class="invalid-feedback"><?php echo $password_err; ?></span>
-                </div>
-                <div class="input.btn_submit">
-                    <input type="submit" class="btn btn-primary" value="Entrar">
-                </div>
-                <p>Não tem uma conta? <a href="register.php">Inscreva-se agora</a>.</p>
-            </form>
-         </div>
-        </section>
+		  </div>
+
+		</section>
+
+	 </main>.
+     <footer class="rodape">
+		<img class="img_rodape" src="rodape.png"></a>
+	</footer>
 </body>
+
 </html>
