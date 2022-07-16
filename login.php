@@ -99,9 +99,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <header class="">
 			<nav class="">
 				<div class="menu">
-                <a class="" href="index.html">Inicio</a>
-                    <a class="" href="sobre.html">Catálogo</a>
-					<a class="" href="sobre.html">Sobre</a>
+                    <a class="" href="index.html">Inicio</a>
+                    <a class="" href="exibir.php">Catálogo</a>
+					<a class="" href="exibir.php">Sobre</a>
 					<a class="" href="login.php">Login</a>			
 				</div>
             </nav>
