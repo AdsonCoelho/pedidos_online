@@ -53,6 +53,7 @@
   text-align: center;
   background-color: rgb(0, 0, 0);
   color: rgb(255, 255, 255); 
+  width: 95%;
 }
 
 
@@ -108,8 +109,8 @@
 
 .mold{
   position: relative;
-  left: 25%;
-  text-align: center;
+  left: 30%;
+  
 
 }
 .moldbt{
@@ -121,14 +122,9 @@
 
 /*Imagem global do rodapé*/
 .img_rodape{
-  position:relative;
+  position:absolute;
   width:80px; 
-  left: 40%;
-}
-
-#img_logo{
-  width: 10%;
-  height: 10%;  
+  left: 50%;
 }
 
 .sobre{

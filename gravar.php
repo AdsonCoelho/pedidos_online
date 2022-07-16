@@ -13,11 +13,13 @@ if($imagem != NULL) {
 
 		$mysqlImg = addslashes(fread(fopen($nomeFinal, "r"), $tamanhoImg));
 
-		mysql_connect($host,$username,$password) or die("Impossível Conectar");
+		$con = mysqlI_connect($host,$username,$password) or die("Impossível conectar ao banco.");
 
-		@mysql_select_db($db) or die("Impossível Conectar");
+		mysqlI_select_db($con,$db) or die("Impossível conectar ao banco");
+		
+		$sql = "INSERT INTO PRODUTOS (PROD_IMG)";
 
-		mysql_query("INSERT INTO PRODUTOS (PROD_IMG) VALUES ('$mysqlImg')") or
+		mysqlI_query($con,"$sql VALUES ('$mysqlImg')") or
 		die("O sistema não foi capaz de executar a query");
 
 		unlink($nomeFinal);

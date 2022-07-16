@@ -93,46 +93,62 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 }
 ?>
  
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <title>Cadastro</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <style>
-        body{ font: 14px sans-serif; }
-        .wrapper{ width: 360px; padding: 20px; }
-    </style>
-</head>
-<body>
-    <div class="wrapper">
-        <h2>Cadastro</h2>
-        <p>Por favor, preencha este formulário para criar uma conta.</p>
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-            <div class="form-group">
-                <label>Nome do usuário</label>
-                <input type="text" name="username" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
-                <span class="invalid-feedback"><?php echo $username_err; ?></span>
-            </div>    
-            <div class="form-group">
-                <label>Senha</label>
-                <input type="password" name="password" class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $password; ?>">
-                <span class="invalid-feedback"><?php echo $password_err; ?></span>
-            </div>
-            <div class="form-group">
-                <label>Confirme a senha</label>
-                <input type="password" name="confirm_password" class="form-control <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $confirm_password; ?>">
-                <span class="invalid-feedback"><?php echo $confirm_password_err; ?></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" class="btn btn-primary" value="Criar Conta">
-                <input type="reset" class="btn btn-secondary ml-2" value="Apagar Dados">
-            </div>
-            <p>Já tem uma conta? <a href="login.php">Entre aqui</a>.</p>
-        </form>
-    </div>  
-    <footer class="rodape">
-		<img class="img_rodape" src="imagens/rodape.png"></a>
-	</footer>  
-</body>
+ <!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+			<link a href="style.css" type="text/css" rel="stylesheet" />
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Sobre</title>
+	</head>
+	
+	<body class="body">
+		<main class="conteudo">
+			<header class="cabecalho">
+				<nav class="cabecalho_menu">
+					<div class="menu">
+						<a class="" href="index.html">Inicio</a>
+						<a class="" href="sobre.html">Catálogo</a>
+						<a class="" href="sobre.html">Sobre</a>
+						<a class="" href="login.php">Login</a>			
+					</div>
+				</nav>
+			</header>
+
+            <div class="form">
+		        <h2 class="label">Novo usuário</h2><br>
+                <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+                    <div class="form-group">
+                        <label>Nome do usuário</label>
+                        <input type="text" name="username" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
+                        <span class="invalid-feedback"><?php echo $username_err; ?></span>
+                    </div>  
+
+                    <div class="form-group">
+                        <label>Senha</label>
+                        <input type="password" name="password" class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $password; ?>">
+                        <span class="invalid-feedback"><?php echo $password_err; ?></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Confirme a senha</label>
+                        <input type="password" name="confirm_password" class="form-control <?php echo (!empty($confirm_password_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $confirm_password; ?>">
+                        <span class="invalid-feedback"><?php echo $confirm_password_err; ?></span>
+                    </div>
+
+                    <div class="moldbt">
+                        <input type="submit" class="moldbt" value="Criar">
+                        <input type="reset" class="moldbt" value="Apagar">
+                    </div>
+
+                        <p>Já tem uma conta? <a href="login.php">Entre aqui</a>.</p>
+                </form>
+              
+        
+        </main>
+        
+        <footer class="rodape">
+            <img class="img_rodape" src="imagens/rodape.png"></a>
+        </footer>  
+    </body>
 </html>

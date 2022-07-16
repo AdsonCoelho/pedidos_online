@@ -119,6 +119,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 		        </span>
 			    
                     <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+                        
                         <div class="">
                             <span style="font-weight: normal">
                                 <label>Nome do usuário</label><br>
@@ -143,17 +144,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             <span style="font-weight: normal">
                                 <input type="submit" class="" value="Entrar">
                                 <a href="register.php"> ou se inscreva aqui</a>.
-
                             </span>
                         </div>
-                        
                 </form>
-
-		  </div>
-
+		    </div>
 		</section>
+	 </main>
 
-	 </main>.
      <footer class="rodape">
 		<img class="img_rodape" src="imagens/rodape.png"></a>
 	</footer>
