@@ -42,10 +42,8 @@ $result=mysqlI_query($con,$sql) or die("Impossível executar a query");
 			<h1>Exibindo os produtos cadastrados </h1>	<br><br>
 			<?php
 				while($row = mysqlI_fetch_object($result)) {
-					echo "<img src='getImagem.php?PicNum=$row->PROD_ID'\>";
-					echo $row->PROD_DESC;	
-					echo $row->PROD_TAM;
-					echo $row->PROD_QTD;
+					echo "<br><img src='getImagem.php?PicNum=$row->PROD_ID' width=150 height=200 border=1 \><br>";
+					echo $row->PROD_DESC.'<br>';				
 
 					}		
 							
