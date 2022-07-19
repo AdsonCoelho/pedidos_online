@@ -24,35 +24,39 @@ $result=mysqlI_query($con,$sql) or die("Impossível executar a query");
 		<title>Sobre</title>
 	</head>
 	
-	<body class="body">
-		<main class="conteudo">
-			<header class="cabecalho">
-				<nav class="cabecalho_menu">
-					<div class="menu">
-						<a class="" href="index.html">Inicio</a>
-						<a class="" href="sobre.html">Catálogo</a>
-						<a class="" href="sobre.html">Sobre</a>
-						<a class="" href="login.php">Login</a>			
-					</div>
-				</nav>
-			</header>
-		
-			<section class="">
-				<h1>Exibindo os produtos cadastrados </h1>	<br><br>
-				<?php
-					while($row = mysqlI_fetch_object($result)) {
-						echo $row->PROD_ID;
-						echo "<img src='getImagem.php?PicNum=$row->PROD_ID' \">";
-					}
+	<body class="">
 
+		<header class="cabecalho">
+			<nav class="cabecalho_menu">
+				<div class="menu">			
+					<a class="" href="index.html">Inicio</a>
+					<a class="" href="exibir.php">Catálogo</a>
+					<a class="" href="sobre.html">Sobre</a>
+					<a class="" href="login.php">Login</a>			
+				</nav>
+			</div>
+		</header>
+	
+		<main class="conteudo">
+		<section class="moldbt">
+			<h1>Exibindo os produtos cadastrados </h1>	<br><br>
+			<?php
+				while($row = mysqlI_fetch_object($result)) {
+					echo "<img src='getImagem.php?PicNum=$row->PROD_ID'\>";
+					echo $row->PROD_DESC;	
+					echo $row->PROD_TAM;
+					echo $row->PROD_QTD;
+
+					}		
+							
 					// fechando a conexão
 					mysqli_close($con);
 				?>
-			</section>
-		</main>
+		</section>
+	</main>
         
-        <footer class="rodape">
-            <img class="img_rodape" src="imagens/rodape.png"></a>
-        </footer>  
+	<footer class="rodape">
+		<img class="img_rodape" src="imagens/rodape.png"></a>
+	</footer>  
     </body>
 </html>

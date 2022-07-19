@@ -5,10 +5,11 @@
 	<meta charset="utf-8">
 	<link a href="style.css" type="text/css" rel="stylesheet" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="cache-control" content="no-cache" />
 	<script language="javascript">
 			
 			function preload(){
-				imgs=Array('f1.jpeg','f2.jpeg','f3.jpeg','f4.jpeg','f5.jpeg');
+				imgs=Array('f1.jpeg','f2.jpeg','f3.jpeg');
 				imgQtde=imgs.length;
 				for (i=0;i<imgs;i++){
 					var preloadimg=new Image();
@@ -18,7 +19,7 @@
 
 			function iniciaSlider(){
 				preload();
-				max=5;
+				max=3;
 				min=1;
 				fi=min;
 				tr=true;
@@ -61,10 +62,10 @@
 	<style>
 
 		#moldura{
-			width: 500px;
-			height: 500px;
+			width: 550px;
+			height: 750px;
 			background-color:rgb(230, 230, 230);
-			transition: background-image 2s;	
+			transition: background-image 1s;	
 		}
 
 	</style>
@@ -72,34 +73,42 @@
 
 <body onload="iniciaSlider()">
 	
-	<main class="conteudo">
-		<header class="">
-			<nav class="">
-				<div class="menu">
-					<a class="" href="index.html">Inicio</a>
-                    <a class="" href="exibir.php">Catálogo</a>
-					<a class="" href="sobre.html">Sobre</a>
-					<a class="" href="login.php">Login</a>			
-				</div>
+	<header class="cabecalho">
+		<nav class="cabecalho_menu">
+			<div class="menu">			
+				<a class="" href="index.html">Inicio</a>
+				<a class="" href="exibir.php">Catálogo</a>
+				<a class="" href="sobre.html">Sobre</a>
+				<a class="" href="login.php">Login</a>			
 			</nav>
-		</header>
-		
-		<section class="conteudo">
-			
-			<h1>Sejam todos bem vindos ao website do A e J Modas Atacado😊</h1><br>
-			<h2>Somos um grupo de vendas de produtos no atacado e varejo direto da fábrica.
+		</div>
+	</header>
+	
+	<main class="conteudo">
+		<section class="conteudo_princ">
+			<div class="">
+				<h1>Sejam todos bem vindos ao website do A e J Modas Atacado😊</h1><br>
+			</div>
+		</section>
+
+		<section class="conteudo_princ">
+			<div class="">
+				<h2>Somos um grupo de vendas de produtos no atacado e varejo direto da fábrica.
 				Em nosso site, você vai encontrar o nosso catálogo de produtos, vai poder conhecer
-				a linha produtos modas femininas, masculinas e infantil, além de acessórios, 
+				a linha de roupas: moda Feminina, Masculinas e Infantil, além de acessórios, 
 				calçados e muitos mais...</h2>
-			</h1>
-			<div class="mold" id="moldura"></div>
-			<div class="moldbt">
+			</div>		
+		</section>
+
+		<div class="moldbt"></div>
+		<div class="mold" id="moldura">		
+			
 				<input type="button" value="Anterior"onclick="ant()"/>
 				<input type="button" value="Próximo" onclick="prox()"/>
 			</div>
-		</section>
-			
-		</main>
+		</div>
+		
+	</main>
 
 	<footer class="rodape">
 		<img class="img_rodape" src="imagens/rodape.png"></a>
