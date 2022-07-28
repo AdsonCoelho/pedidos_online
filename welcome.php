@@ -30,32 +30,22 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 				</div>
 			</nav>
 		</header>
-        <h2><?php echo htmlspecialchars($_SESSION["username"]);?>, você está na área
+        <h2><?php echo htmlspecialchars($_SESSION["username"]); ?>, você está na área
 		administrativa.
-		<div> <br>O que deseja fazer? </div> </h2> <br>
+		<div> <br>O que deseja fazer? </div> </h2>
 
-		<h2>1 - Cadastrar usuários?</h2>
-		<a href="reset-password.php" class="btn btn-warning"><h3>Cadastrar usuários</h3></a>		
+		<a href="register.php" class="btn btn-warning"><h2>1 - Cadastrar usuários</h2></a>
 
-		<h2>2 - Alterar a senha:</h2>
-		<a href="reset-password.php" class="btn btn-warning"><h3>Alterar a senha</h3></a>
+		<a href="register.php" class="btn btn-warning"><h2>2 -  Alterar a senha</h2></a>
 
-		<h2>3 - Cadastrar produtos:</h2>
-		<a href="reset-password.php" class="btn btn-warning"><h3>Cadastrar produtos</h3></a>
-
-		<h2>4 - Exibir produtos:</h2>
-		<a href="reset-password.php" class="btn btn-warning"><h3>Exibir produtos</h3></a>
-
-		<h2>5 - Excluir produtos:</h2>
-		<a href="reset-password.php" class="btn btn-warning"><h3>Excluir produtos</h3></a>
-		
+		<a href="cadastrar_produtos.html" class="btn btn-warning"><h2>3 - Cadastrar produtos</h2></a>
+			
 		<form action="gravar.php" method="POST" enctype="multipart/form-data">
-			<label for="imagem"><h2>6 - Inserir novo produto:</h2></label><br/>
+			<label for="imagem"><h5>Clique no botão para inserir uma imagem:</h5></label><br/>
 		
-			<input type="file" name="imagem"/>		
-			<input type="submit" value="Enviar"/>
+			<input type="file" name="imagem" title = "Adicione uma imagem"  /><br>	
+			<input type="submit" value="Enviar" accept="image/png, image/jpeg"/>
 		</form>
-
 
     </main>
 

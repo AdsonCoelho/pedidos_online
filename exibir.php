@@ -25,7 +25,6 @@ $result=mysqlI_query($con,$sql) or die("Impossível executar a query");
 	</head>
 	
 	<body class="">
-
 		<header class="cabecalho">
 			<nav class="cabecalho_menu">
 				<div class="menu">			

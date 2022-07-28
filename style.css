@@ -55,9 +55,6 @@
   width: 95%;
 }
 
-
-
-
 .form btn_entrar{
   text-align: right;
 }
@@ -66,7 +63,7 @@
   position:relative;
   font-size: 15px;
   color: rgb(0, 0, 0); 
-  background-color: rgb(243, 181, 181);
+  background-color: rgb(255, 157, 157);
 	text-align: justify;
   font-family: cursive;
   left: 2%;
@@ -91,7 +88,7 @@
 
 .miniatura {
   position:relative;
-  width:20%;  
+  width:25%;  
   height: 100%;   
 }
 

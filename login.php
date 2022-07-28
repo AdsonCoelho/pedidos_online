@@ -123,7 +123,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         <div class="">
                             <span style="font-weight: normal">
                                 <label>Nome do usuário</label><br>
-                                <input type="text" name="username" class="form-control <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
+                                <input type="text" name="username" class="form-control 
+                                <?php echo (!empty($username_err)) ? 'is-invalid' : ''; ?>" value="<?php echo $username; ?>">
                                     <span class="invalid-feedback">
                                         <?php echo $username_err; ?>
                                     </span>
@@ -133,7 +134,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                         <div class="">
                             <span style="font-weight: normal">
                                 <label>Digite sua senha</label><br>
-                                <input type="password" name="password" class="form-control <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?> ">
+                                <input type="password" name="password" class="form-control 
+                                <?php echo (!empty($password_err)) ? 'is-invalid' : ''; ?> ">
                                 <span class="invalid-feedback">
                                     <?php echo $password_err; ?>
                                 </span>
