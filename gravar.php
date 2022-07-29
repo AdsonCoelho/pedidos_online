@@ -28,7 +28,7 @@ if($imagem != NULL) {
 	}
 }
 else {
-	echo"Você não realizou o upload de forma satisfatória.";
+	echo"Você não realizou o upload da forma correta!";
 }
 
 ?>

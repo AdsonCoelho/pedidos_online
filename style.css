@@ -3,6 +3,7 @@
 	margin: 0;
 	padding: 0;
   text-decoration: none;
+  padding: 1rem;
 }
 
 /*Menu global fixo para todas as páginas*/
@@ -138,4 +139,8 @@
   position:relative;
   width:50px; 
   left: 50%; 
+}
+
+.menu_welcome{
+  border: 1px solid #000000;
 }
