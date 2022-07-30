@@ -44,8 +44,8 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
 		
 		<form action="gravar.php" method="POST" enctype="multipart/form-data">
 			<label for="imagem"></label>
-			<input type="file" name="imagem" title = "Adicione uma imagem"/><br>	
-			<input type="submit" value="Enviar" accept="image/png, image/jpeg"/>
+			<input type="file" name="imagem"/>	
+			<input type="submit" name="Enviar" value="Enviar" accept="image/png, image/jpeg"/>
 		</form>
 
     </main>

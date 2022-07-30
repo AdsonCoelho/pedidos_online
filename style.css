@@ -1,47 +1,37 @@
 /*Iniciando margens e espaço do novegador com 0*/
-*{
-	margin: 0;
-	padding: 0;
-  text-decoration: none;
+html { 
+  font-family: sans-serif; 
+  background: #eee; 
   padding: 1rem;
 }
 
-/*Menu global fixo para todas as páginas*/
+body {
+  max-width: 1200px; 
+  margin: 0 auto; 
+  background: white;
+}
+
 .cabecalho{
   position:relative;
-  font-size: 20px;
   color: rgb(0, 0, 0); 
-  background-color: rgb(255, 255, 255);
-	text-align: justify;
   font-family: cursive;
-  left: 2%;
-  width: 95%;
+  
  }
 
 .menu{
 	text-align: center;
   background-color: black;
+  
+  
 }
 
 /*Menu index*/
 .menu a{
-  position:relative;
   color: rgb(255, 255, 255);
  	font-size: 22px;
 	font-family: cursive;
   padding: 15px;
-
-}
-
-.form{
-  position:relative;
-  text-align: left;
-  width: 20%;
-  height: 20%;
-  padding: 100px;
-  top:50px;
-  left: 35%;
-  
+  flex: auto;
 }
 
 .alert-danger{
@@ -53,7 +43,6 @@
   text-align: center;
   background-color: rgb(0, 0, 0);
   color: rgb(255, 255, 255); 
-  width: 95%;
 }
 
 .form btn_entrar{
@@ -64,27 +53,9 @@
   position:relative;
   font-size: 15px;
   color: rgb(0, 0, 0); 
-  background-color: rgb(255, 157, 157);
-	text-align: justify;
+  background-color: rgb(252, 209, 209);
   font-family: cursive;
-  left: 2%;
-  width: 95%;  
-}
-
-
-.img1_conteudo {
-  position:relative;
-  width:100%;
-  text-align: center;
-  top:1px;
-}
-
-.img2_conteudo {
-  position:relative;
-  width:100%;
-  text-align: center;
-  top:1px;
-  
+  padding: 1rem;
 }
 
 .miniatura {
@@ -102,13 +73,11 @@
 .mold{
   position: relative;
   left: 30%;
-  
 
 }
 .moldbt{
   position: relative;
   text-align: center;
-
 }
 
 
