@@ -34,15 +34,13 @@ $result=mysqlI_query($con,$sql) or die("Impossível executar a query");
 	
 		<main class="conteudo">
 		<section class="">
-			<h1>Exibindo os produtos cadastrados </h1>	<br><br>
+			<h1>Exibindo os produtos cadastrados </h1>
 			<?php
 				while($row = mysqlI_fetch_object($result)) {
-					echo "<br> <img src='getImagem.php?PicNum=$row->PROD_ID' width=150 height=200 border=1 /><br>";
-					echo $row->PROD_DESC."<br><a href='exibir.php'>Exibir detalhes</a><br>";				
-
-					}		
-							
-					// fechando a conexão
+					echo "<br> <img src='getImagem.php?PicNum=$row->PROD_ID' width=150 height=200 border=1'/><br>";
+					echo $row->PROD_DESC."<br><a href='getImagem.php?PicNum=$row->PROD_ID'>Exibir detalhes</a><br>";				
+					}									
+					
 					mysqli_close($con);
 				?>
 		</section>
