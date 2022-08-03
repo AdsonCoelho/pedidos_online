@@ -6,6 +6,7 @@
 	<link a href="style.css" type="text/css" rel="stylesheet" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta http-equiv="cache-control" content="no-cache" />
+	
 	<script language="javascript">
 			
 			function preload(){
@@ -25,6 +26,16 @@
 				tr=true;
 				carregaFoto("imagens/f1.jpeg");
 				document.getElementById("moldura").addEventListener("transitionend",fimTr);
+				tmr=setInterval(trocaFoto,4000);
+			}
+			
+			function trocaFoto(){
+				tr=false;
+				fi++;
+				if (fi>max){
+					fi=min;
+				}
+				carregaFoto("imagens/f"+fi+".jpeg");
 			}
 
 			function fimTr(){
@@ -36,25 +47,30 @@
 			}
 
 			function prox(){
+				clearInterval(tmr);
 				if (tr){
 					tr=false;
 					fi++;
 						if (fi>max){
 						fi=min;
 					}
+					carregaFoto("imagens/f"+fi+".jpeg");
 				}
-				carregaFoto("imagens/f"+fi+".jpeg");
+				tmr=setInterval(trocaFoto,6000);
+
 			}
 
 			function ant(){
+				clearInterval(tmr);
 				if (tr){
 					tr=false;
 					fi--;
 						if (fi<min){
 						fi=max;
 					}
+					carregaFoto("imagens/f"+fi+".jpeg");
 				}
-				carregaFoto("imagens/f"+fi+".jpeg");
+				tmr=setInterval(trocaFoto,6000);
 			}
 
 	</script>
@@ -84,7 +100,7 @@
 	<main class="conteudo">
 		<section class="">
 			<div class="">
-				<h1>Sejam todos bem vindos ao website do A e J Modas Atacado😊</h1><br>
+				<h1>Sejam todos bem vindos ao website do A e J Modas Atacado😊</h1>
 			</div>
 	
 			<div class="">
@@ -96,11 +112,11 @@
 		</section>
 
 		<div class="moldbt"></div>
-		<div class="mold" id="moldura">		
-			
+			<div class="mold" id="moldura">		
 				<input type="button" value="Anterior"onclick="ant()"/>
 				<input type="button" value="Próximo" onclick="prox()"/>
 			</div>
+			
 		</div>
 		
 	</main>
