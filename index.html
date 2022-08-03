@@ -46,26 +46,15 @@
 				document.getElementById("moldura").style.backgroundImage="URL("+foto+")";
 			}
 
-			function prox(){
+			function troca(dr){
 				clearInterval(tmr);
-				if (tr){
+				if(tr){
 					tr=false;
-					fi++;
-						if (fi>max){
+					fi+=dr;
+					if(fi>max){
 						fi=min;
 					}
-					carregaFoto("imagens/f"+fi+".jpeg");
-				}
-				tmr=setInterval(trocaFoto,6000);
-
-			}
-
-			function ant(){
-				clearInterval(tmr);
-				if (tr){
-					tr=false;
-					fi--;
-						if (fi<min){
+					if(fi<min){
 						fi=max;
 					}
 					carregaFoto("imagens/f"+fi+".jpeg");
@@ -113,8 +102,8 @@
 
 		<div class="moldbt"></div>
 			<div class="mold" id="moldura">		
-				<input type="button" value="Anterior"onclick="ant()"/>
-				<input type="button" value="Próximo" onclick="prox()"/>
+				<input type="button" value="Anterior"onclick="troca(-1)"/>
+				<input type="button" value="Próximo" onclick="troca(1)"/>
 			</div>
 			
 		</div>
