@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> A e J modas atacado</title>
+	<meta charset="utf-8">
+	<link a href="style.css" type="text/css" rel="stylesheet" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="cache-control" content="no-cache" />
+	
+	<script language="javascript">
+			
+			function preload(){
+				imgs=Array('f1.jpeg','f2.jpeg','f3.jpeg');
+				imgQtde=imgs.length;
+				for (i=0;i<imgs;i++){
+					var preloadimg=new Image();
+					preloadimg.src=imgs[1];
+				}
+			}
+
+			function iniciaSlider(){
+				preload();
+				max=3;
+				min=1;
+				fi=min;
+				tr=true;
+				carregaFoto("imagens/f1.jpeg");
+				document.getElementById("moldura").addEventListener("transitionend",fimTr);
+				tmr=setInterval(trocaFoto,4000);
+			}
+			
+			function trocaFoto(){
+				tr=false;
+				fi++;
+				if (fi>max){
+					fi=min;
+				}
+				carregaFoto("imagens/f"+fi+".jpeg");
+			}
+
+			function fimTr(){
+				tr=true;	
+			}
+
+			function carregaFoto(foto){
+				document.getElementById("moldura").style.backgroundImage="URL("+foto+")";
+			}
+
+			function troca(dr){
+				clearInterval(tmr);
+				if(tr){
+					tr=false;
+					fi+=dr;
+					if(fi>max){
+						fi=min;
+					}
+					if(fi<min){
+						fi=max;
+					}
+					carregaFoto("imagens/f"+fi+".jpeg");
+				}
+				tmr=setInterval(trocaFoto,6000);
+			}
+
+	</script>
+		
+	<style>
+
+		#moldura{
+			width: 550px;
+			height: 750px;
+			background-color:rgb(230, 230, 230);
+			transition: background-image 1s;	
+		}
+
+	</style>
+</head>
+
+<body onload="iniciaSlider()">
+	
+		<nav class="menu">
+			<a class="" href="index.html">Inicio</a>
+			<a class="" href="exibir.php">Catálogo</a>
+			<a class="" href="sobre.html">Sobre</a>
+			<a class="" href="login.php">Login</a>			
+		</nav>
+
+	
+	<main class="conteudo">
+		<section class="">
+			<div class="">
+				<h1>Sejam todos bem vindos ao website do A e J Modas Atacado😊</h1>
+			</div>
+	
+			<div class="">
+				<h2>Somos um grupo de vendas de produtos no atacado e varejo direto da fábrica.
+				Em nosso site, você vai encontrar o nosso catálogo de produtos, vai poder conhecer
+				a linha de roupas: moda Feminina, Masculinas e Infantil, além de acessórios, 
+				calçados e muitos mais...</h2>
+			</div>		
+		</section>
+
+		<div class="moldbt"></div>
+			<div class="mold" id="moldura">		
+				<input type="button" value="Anterior"onclick="troca(-1)"/>
+				<input type="button" value="Próximo" onclick="troca(1)"/>
+			</div>
+			
+		</div>
+		
+	</main>
+
+	<footer class="rodape">
+		<img class="img_rodape" src="imagens/rodape.png"></a>
+	</footer>
+	
+</body>
+	
+
+</html>

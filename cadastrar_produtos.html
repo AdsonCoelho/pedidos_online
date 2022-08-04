@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link href="style.css" type="text/css" rel="stylesheet">
+  <title>Área do vendedor</title>
+</head>
+	
+  <body class="">
+		<header class="cabecalho">
+			<nav class="cabecalho_menu">
+				<div class="menu">			
+					<a class="" href="index.html">Inicio</a>
+					<a class="" href="exibir.php">Catálogo</a>
+					<a class="" href="sobre.html">Sobre</a>
+					<a class="" href="login.php">Login</a>			
+				</nav>
+			</div>
+		</header>
+	
+		<main class="conteudo">
+      <form class="formulario_vendedor" autocomplete="off">
+        <form class="login" method="post" name="login">
+          <div class="campos_login">
+            <h4><i class="label_pedido"></i> Cadastrar Produtos</h4>
+                <label>
+                  <input class="campos" type="text" placeholder="Descrição"  name="prod_desc">
+              </label> <br>   
+
+                <label>
+                  <input  class="campos" type="text" placeholder="Tamanho" name="prod_tam">
+              </label><br>
+          
+              <label>
+                  <input class="campos" type="text" placeholder="Escolha uma opção"  name="prod_tipo">
+              </label> <br>
+         
+              <input type="button" class="btn fade_8S" name="cadastrar" value="Cadastrar" onClick="Login()">
+          </div>
+        </form>
+      </form>
+  </main>
+  
+  <footer class="rodape">
+		<img class="img_rodape" src="rodape.png"></a>
+	</footer>
+
+  </body>
+
+</html>

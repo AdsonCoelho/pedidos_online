@@ -1,0 +1,117 @@
+/*Iniciando margens e espaço do novegador com 0*/
+html { 
+  font-family: sans-serif; 
+  background: #eee; 
+  padding: 1rem;
+}
+
+body {
+  max-width: 1200px; 
+  margin: 0 auto; 
+  background: white;
+}
+
+.cabecalho{
+  position:relative;
+  color: rgb(0, 0, 0); 
+  font-family: cursive;
+  
+ }
+
+.menu{
+	text-align: center;
+  background-color: black;
+  
+  
+}
+
+/*Menu index*/
+.menu a{
+  color: rgb(255, 255, 255);
+ 	font-size: 22px;
+	font-family: cursive;
+  padding: 15px;
+  flex: auto;
+}
+
+.alert-danger{
+  color: rgb(255, 0, 0);
+}
+
+.label{
+  position:relative;
+  text-align: center;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255); 
+}
+
+.form btn_entrar{
+  text-align: right;
+}
+
+.conteudo{
+  position:relative;
+  font-size: 15px;
+  color: rgb(0, 0, 0); 
+  background-color: rgb(252, 209, 209);
+  font-family: cursive;
+  padding: 1rem;
+}
+
+.miniatura {
+  position:relative;
+  width:25%;  
+  height: 100%;   
+}
+
+.img_la {
+  position:relative;
+  width:20%;
+  height: 100%;   
+}
+
+.mold{
+  position: relative;
+  left: 30%;
+
+}
+.moldbt{
+  position: relative;
+  text-align: center;
+}
+
+
+/*Imagem global do rodapé*/
+.img_rodape{
+  position:absolute;
+  width:80px; 
+  left: 50%;
+}
+
+.sobre{
+  position: relative;
+  text-align: center; 
+}
+.sobresite{
+  position: relative;
+  text-align: center; 
+  font-size: 16;
+  color: blue;
+}
+.img_sobre{
+  position:relative;
+  width:50px; 
+  left: 50%;
+}
+
+.exibir_img{
+  position:relative;
+  width:50px; 
+  left: 50%; 
+}
+
+/*
+.menu_welcome{
+  border: 0px solid #000000;
+}
+*/
